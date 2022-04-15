@@ -1,6 +1,6 @@
 FROM ubuntu
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y && apt-get install apache2 -y
-COPY Index.html /var/www/html/
+COPY index.html /var/www/
 EXPOSE 80
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+CMD ["-D", "FOREGROUND"]
